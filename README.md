@@ -58,4 +58,4 @@ NOTE: the server URL cannot be `localhost` as this refers to localhost in the co
 - Commit your changes using:
 	`docker commit [CONTAINER_ID] [new_image_name]`
 	
-- Make sure to update the env vars in `C:\teamcity\custom_agent`
+- Make sure to update the env vars in `<path to agent config folder>/custom_agent`
