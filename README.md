@@ -22,8 +22,6 @@ docker run --name teamcity-server-instance  \
 
 `docker ps` to confirm that container is running
 
-# How to setup your your Self-Hosted TeamCity Environment using Docker containers
-
 ## Navigate to TC Server in Browser
 
 Open your browser and go to `localhost:<port-on-host>`
@@ -54,8 +52,10 @@ NOTE: the server URL cannot be `localhost` as this refers to localhost in the co
 - Select your agent pool and you're good to go
 
 ## Customising the Agent
-
+- Use the minimal agent => `jetbrains/teamcity-minimal-agent`
 - Login to the agent using:
-	`docker exec -it my-customized-agent bash`
+	`docker exec -u 0 -it my-customized-agent bash`
 - Commit your changes using:
-	`docker commit my-customized-agent <the registry where you what to store the image>`
+	`docker commit [CONTAINER_ID] [new_image_name]`
+	
+- Make sure to update the env vars in `C:\teamcity\custom_agent`
