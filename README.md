@@ -42,6 +42,7 @@ docker run --name teamcity-agent-instance -e SERVER_URL="<url to TeamCity server
 ```
 
 NOTE: the server URL cannot be `localhost` as this refers to localhost in the container itself
+NOTE: If you'd like to use a custom agent that has Powershell and Git on top of the jetbrains agent, you can use the image here instead of `jetbrains/teamcity-agent`: reecegibbs98/teamcity-custom-agent:latest
 
 ## Configure the TC Agent
 
